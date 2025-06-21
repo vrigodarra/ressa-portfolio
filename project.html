@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Ressa-Nova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at center, #0b0b1f 0%, #000010 100%);
+      color: #00ffe5;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    nav {
+      background: #000021;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #00ffe5;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #00ffe5;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #87faff;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(to bottom, #001f3f, #000);
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #00ffe5;
+    }
+
+    .section {
+      padding: 2rem 4rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #1a1a3d;
+      border: 1px solid #00ffe54a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px #00ffe54a;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #00ffe5;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      color: #00ffe5;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .modal-content {
+      background-color: #111;
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal img {
+      width: 50%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px; right: 20px;
+      font-size: 30px;
+      color: #ff6666;
+      cursor: pointer;
+    }
+
+    footer {
+      color: #aaa;
+      background-color: #00021a;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Ressa-Nova Projects</h1>
+    <p>Click a project to learn more.</p>
+  </header>
+
+  <div class="section card-grid">
+    <!-- One card per project -->
+    <div class="card" onclick="openModal('Naruto Vision', 'A computer vision-based project inspired by the Naruto universe. Built with OpenCV and media pipe.', 'images/naruto.png')">
+      <img src="images/naruto.png" alt="Naruto Vision">
+      <div class="card-title">Naruto Vision</div>
+    </div>
+    <div class="card" onclick="openModal('Smart SDN', 'A software-defined networking system for intelligent traffic control and automation.', 'images/psds.png')">
+      <img src="images/psds.png" alt="Smart SDN">
+      <div class="card-title">Smart SDN</div>
+    </div>
+    <div class="card" onclick="openModal('ER Music Player', 'A custom music player with emotion recognition using facial expressions.', 'images/er-musicPlayer.png')">
+      <img src="images/er-musicPlayer.png" alt="ER Music Player">
+      <div class="card-title">ER Music Player</div>
+    </div>
+    <div class="card" onclick="openModal('Load Balancer', 'A real-time server load distribution system using Python and Bash.', 'images/p-load-balencer.png')">
+      <img src="images/p-load-balencer.png" alt="Load Balancer">
+      <div class="card-title">Load Balancer</div>
+    </div>
+    <!-- <div class="card" onclick="openModal('Twitter Clone', 'Full-stack Twitter clone built using MERN stack with auth and real-time updates.', 'images/')">
+      <img src="" alt="Twitter Clone">
+      <div class="card-title">Twitter Clone</div>
+    </div>
+    <div class="card" onclick="openModal('Instagram Clone', 'MERN-based photo-sharing app with user profiles and likes/comments.', 'images/')">
+      <img src="" alt="Instagram Clone">
+      <div class="card-title">Instagram Clone</div>
+    </div>
+    <div class="card" onclick="openModal('Hulu Clone', 'Video streaming UI/UX clone with React, styled to match Hulu.', 'images/')">
+      <img src="" alt="Hulu Clone">
+      <div class="card-title">Hulu Clone</div>
+    </div> -->
+    <div class="card" onclick="openModal('Self-Driving Cars', 'Simulation and path detection system for autonomous navigation.', 'images/vsdc.png')">
+      <img src="images/vsdc.png" alt="Self-Driving Cars">
+      <div class="card-title">Self-Driving Cars</div>
+    </div>
+    <div class="card" onclick="openModal('Chat App', 'Real-time messaging app using sockets with a minimal UI.', 'images/chat-app.png')">
+      <img src="images/chat-app.png" alt="Chat App">
+      <div class="card-title">Chat App</div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="Project">
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Ressa-Nova Dev</p>
+  </footer>
+
+  <script>
+    function openModal(title, desc, img) {
+      document.getElementById('modal').style.display = 'block';
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-desc').textContent = desc;
+      document.getElementById('modal-img').src = img;
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      if (event.target == document.getElementById('modal')) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>

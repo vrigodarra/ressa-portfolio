@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ressa-Nova Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at center, #0b0b1f 0%, #000010 100%);
+      color: #00ffe5;
+      font-family: 'Orbitron', sans-serif;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background: #000021;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #00ffe5;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #00ffe5;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #87faff;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(to bottom, #001f3f, #000);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #00ffe5;
+    }
+
+    header p {
+      color: #87faff;
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .boot-sequence {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #0ff;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .section {
+      padding: 2rem 4rem;
+      border-bottom: 1px solid #00ffe52a;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      border-left: 4px solid #00ffe5;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #1a1a3d;
+      border: 1px solid #00ffe54a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffe54a;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #00ffe5;
+    }
+
+    .quantum, .vision, .chemistry, .security {
+      color: #8cf7ff;
+      font-weight: bold;
+    }
+
+    input[type=range] {
+      width: 100%;
+      margin-top: 1rem;
+      background: transparent;
+      -webkit-appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background: #00ffe5;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #00ffe5;
+      box-shadow: 0 0 10px #00ffe5;
+      margin-top: -7px;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      background: #1a1a3d;
+      height: 6px;
+      border-radius: 10px;
+    }
+
+    #yearLabel {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      color: #00ffe5;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #typewriterBox {
+      margin-top: 1rem;
+      padding: 1.5rem;
+      border: 1px solid #00ffe5;
+      background: #0b0b1f;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffe52a;
+      min-height: 80px;
+      font-size: 1.2rem;
+      color: #8cf7ff;
+      font-family: 'Orbitron', sans-serif;
+      white-space: pre-wrap;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #aaa;
+      background-color: #00021a;
+    }
+
+    .hud-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/space.png');
+      opacity: 0.03;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="hud-bg"></div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Ressa-Nova Portfolio</h1>
+    <p>Offline AI | OpenCV Vision | Quantum & Chemistry Enthusiast | Cybersecurity Focus</p>
+    <div class="boot-sequence">Initializing Ressa-Nova Core Systems... ✓<br>Establishing Quantum Channel... ✓<br>Loading UI Interface...</div>
+  </header>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3 class="vision">Offline Face Recognition Assistant</h3>
+        <p>Built with OpenCV and Python, this JARVIS-style assistant recognizes users and takes commands offline.</p>
+      </div>
+      <div class="card">
+        <h3 class="security">Local Ethical Hacking Lab</h3>
+        <p>Simulated cybersecurity threats and exploits with Wireshark, Nmap, Metasploit, and defensive scripting.</p>
+      </div>
+      <div class="card">
+        <h3 class="quantum">Quantum Simulation Visualizer</h3>
+        <p>A basic quantum mechanics simulation showing wavefunction behavior using Python and visual tools.</p>
+      </div>
+      <div class="card">
+        <h3 class="chemistry">Chemical Structure Analyzer</h3>
+        <p>Analyzed molecular properties using SMILES notation and visualized interactions with RDKit.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> Python, HTML/CSS, Bash, JavaScript</p>
+    <p><strong>Libraries:</strong> OpenCV, PyTorch, scikit-learn, RDKit, Matplotlib</p>
+    <p><strong>Focus Areas:</strong> Computer Vision, Cybersecurity, Quantum Simulation, Chemistry Modeling</p>
+  </div>
+
+  <div class="section">
+    <h2>My Developer Journey</h2>
+
+    <input type="range" min="2019" max="2025" value="2019" id="yearSlider" step="1" oninput="updateJourney(this.value)">
+
+    <div id="yearLabel">Year: <span id="currentYear">2019</span></div>
+
+    <div id="typewriterBox">
+      <span id="typewriterText"></span>
+    </div>
+  </div>
+
+  <footer>
+    <p>Designed by Nitin Gavande - Ressa-Nova Dev</p>
+  </footer>
+
+  <script>
+    const journeyMap = {
+      2019: "🧠 2019: Started learning basic programming — Python, HTML & CSS.",
+      2020: "🛠️ 2020: Built small AI tools, started OpenCV & machine learning.",
+      2021: "🔍 2021: Created Naruto Vision & Load Balancer using SDN & Python.",
+      2022: "🎵 2022: Released ER Music Player, Chat App, and Instagram Clone.",
+      2023: "📱 2023: Finished Twitter & Hulu Clones, started Self-Driving Cars.",
+      2024: "🧪 2024: Built Quantum Simulators & Cybersecurity Labs.",
+      2025: "🚀 2025: Launching Ressa-Nova. Sharing vision with the world."
+    };
+
+    const yearSlider = document.getElementById('yearSlider');
+    const yearText = document.getElementById('currentYear');
+    const typewriterText = document.getElementById('typewriterText');
+
+    let typingInterval;
+
+    function typeText(text) {
+      clearInterval(typingInterval); // fix glitching
+      typewriterText.textContent = '';
+      let i = 0;
+      typingInterval = setInterval(() => {
+        if (i < text.length) {
+          typewriterText.textContent += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 25);
+    }
+
+    function updateJourney(year) {
+      yearText.textContent = year;
+      const journey = journeyMap[year] || "No journey recorded for this year.";
+      typeText(journey);
+    }
+
+    // Initialize on load
+    updateJourney(yearSlider.value);
+  </script>
+</body>
+</html>
